@@ -14,7 +14,7 @@
         title: 'logo',
         icon: {
             elem: 'icon',
-            url: 'http://...',
+            url: 'http://yastatic.net/lego/_/ExOJSanIrX2IAis4l5gO2uX6M1E.png',
             alt: 'logo'
         }
     }
@@ -25,7 +25,7 @@
 ```
     <div class="b-logo">
         <a class="b-link b-logo__link" href="/" title="logo">
-            <img class="b-icon b-logo__icon" src="http://..." alt="logo"/>
+            <img class="b-icon b-logo__icon" src="http://yastatic.net/lego/_/ExOJSanIrX2IAis4l5gO2uX6M1E.png" alt="logo"/>
         </a>
     </div>
 ```
