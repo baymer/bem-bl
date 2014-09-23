@@ -34,7 +34,7 @@
 
 ```bemjson
 {
-  block: 'b-menu-vert',
+  block: 'b-menu-horiz',
   title: {
     elem: 'title',
     content: 'Menu title'
@@ -88,21 +88,6 @@
 }
 ```
 
-Не всегда меню на сайте подразумевает ссылки, уводящие пользователя на другую страницу. Меню может использоваться и для клиентского JavaScript-приложения. В этом случае содержанием пунктов меню обычно бывают псевдоссылки:
-
-```bemjson
-{
-    elem: 'item',
-    elemMods: { 'state' : 'current' },
-    content: {
-        block: 'b-link',
-        mods : { 'pseudo' : 'yes' },
-        url: '/',
-        content: 'First point'
-    }
-}
-```
-
 **Горизонтальное меню с клиентской функциональностью**
 
 Не всегда меню на сайте подразумевает ссылки, уводящие пользователя на другую страницу. Меню может использоваться и для клиентского JavaScript-приложения. В этом случае содержанием пунктов меню обычно бывают псевдоссылки:
@@ -152,6 +137,12 @@
       content: {
         block: 'b-link', url: '/', content: 'Home'
       }
+    },
+    {
+      elem: 'item',
+      content: {
+        block: 'b-link', url: '/', content: 'Office'
+      }
     }
   ]
 }
@@ -175,9 +166,20 @@ BEMJSON меню отличается наличием свойства `separat
 
 ```bemjson
 {
-    elem: 'item',
-    elemMods: { state: 'current' },
-    content: 'Home'
+  block: 'b-menu-horiz',
+  js: false,
+  mods: { layout: 'normal' },
+  content: [
+    {
+        elem: 'item',
+        elemMods: { state: 'current' },
+        content: 'Home'
+    },
+    {
+      elem: 'item',
+      content: 'Office'
+    }
+  ]
 }
 ```
 JavaScript-код блока реализован так, что активный пункт меню переключается при клике левой кнопкой мыши на соответствующем элементе `item-selector`.

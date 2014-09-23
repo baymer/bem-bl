@@ -11,7 +11,7 @@
 
 ###Объявление блока на странице
 
-```bemjson
+```
 {
 	block: 'b-icon'
 }
@@ -38,7 +38,7 @@
 ```bemjson
 {
 	block: 'b-icon',
-	url: 'my-icon.png',
+	url: 'http://yastatic.net/lego/_/ExOJSanIrX2IAis4l5gO2uX6M1E.png',
 	alt: 'My icon'
 }
 ```
