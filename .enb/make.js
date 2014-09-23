@@ -155,7 +155,7 @@ module.exports = function(config) {
             var nodeDir = nodeConfig.getNodePath(),
                 blockSublevelDir = path.join(nodeDir, '..', '.blocks'),
                 sublevelDir = path.join(nodeDir, 'blocks'),
-                extendedLevels = [].concat(getLibLevels(platform));
+                extendedLevels = [].concat(getTestLevels(platform));
 
             if(fs.existsSync(blockSublevelDir)) {
                 extendedLevels.push(blockSublevelDir);
@@ -195,6 +195,13 @@ function getLibLevels(platform) {
     return PLATFORMS[platform].map(function(level) {
         return 'blocks-' + level;
     });
+}
+
+function getTestLevels(platform) {
+    return [].concat(
+        getLibLevels(platform),
+        'test.blocks'
+    );
 }
 
 function wrapInPage(bemjson, meta) {
